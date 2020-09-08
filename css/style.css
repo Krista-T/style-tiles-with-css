@@ -23,7 +23,7 @@ use the fonts in other ways in the font hierarchy etc. */
  
 
   --secondary-color1: #ece7e7;
-  --secondary-color2: #a3c8ca;
+  --secondary-color2: #acd1bf;
   --secondary-color3: #f3ae9e;
   --secondary-color4: #f1d3ae;
 
@@ -36,7 +36,7 @@ use the fonts in other ways in the font hierarchy etc. */
 }
 
 
-/***COLORS***/
+/***COLOR PALETTE***/
 
 .primary-color1 {
   background-color: var(--primary-color1);
@@ -72,11 +72,13 @@ use the fonts in other ways in the font hierarchy etc. */
   background-color: var(--secondary-color4);
 }
 
+
+/**BUTTONS**/
 button {
-  transition: all 3s;
-}
-a {
-  transition: all 3s;
+  transition: all 2s;
+} 
+ a {
+  transition: all 2s;
 }
 
 .primary-button {
@@ -121,7 +123,7 @@ button {
   letter-spacing: 1px;
   color: var(--secondary-color1);
   text-shadow: 0px -1px 0px #7795a1;
-  transition: all 0.2s ease;
+  /* transition: all 0.2s ease; */
   cursor: pointer;
   margin: 0 1rem 1rem 0;
 }
@@ -140,6 +142,7 @@ button:focus-within {
 } */
 
 
+
 html {
   font-size: 100%;
   font-family: var(--primary-font);
@@ -148,6 +151,7 @@ html {
 img {
   max-width: 100%;
   height: auto;
+ margin-top: -10%;
 }
 
 header,
@@ -204,10 +208,10 @@ section {
   margin-bottom: calc(4 * var(--white-space));
 }
 
-.section-heading {
+.section-heading{
   font-style: italic;
-  font-size: 1.3rem;
-  color: #777;
+  font-size: 1.2rem;
+   color: #777; 
   margin: 0.5rem 0;
 }
 
@@ -290,8 +294,9 @@ ul li:last-child {
 
 p.typography-sample {
   font-family: var(--copy-font);
-  line-height: 1.5;
-  font-size: 1.6rem;
+  color: var(--primary-color1);
+  line-height: 1.4;
+  font-size: 1.4rem;
   max-width: 960px;
 }
 
@@ -305,10 +310,15 @@ em {
 
 a {
   font-family: var(--copy-font);
-  color: var(--link-color);
+  color: var(--primary-color1);
   font-size: 1.4rem;
   font-weight: bold;
   transition: all 0.2s;
+ 
+}
+
+a:hover, a:visited {
+  color: #6f6f6f;
 }
 
 p[class*="font-details-"] {
@@ -319,12 +329,14 @@ p[class*="font-details-"] {
   color: #6f6f6f;
 }
 
-.adjectives ul {
-  font-size: 2rem;
-  opacity: 0.5;
+.adjectives {
+  margin-top: 15%;
 }
 
 .adjectives ul {
+ margin-top: 5%;
+  font-size: 2rem;
+  opacity: 0.5;
   flex-direction: column;
   align-items: space-between;
 }
