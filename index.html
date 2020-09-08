@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Style Tiles with CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -11,10 +12,10 @@
   <body>
     <div class="full-width header-wrapper">
       <header>
-        <h1>Style Tile Template</h1>
-        <h2>Project name</h2>
-        <h3>Style tile</h3>
-        <h4>Version 1</h4>
+        <h1>Style Tile</h1>
+        <h2>3Day-Vacay</h2>
+        <!-- <h3>Style tile</h3> -->
+        <h4>Kristina´s version</h4>
       </header>
     </div>
 
@@ -22,27 +23,37 @@
       <div class="column">
         <section class="swatches">
           <h3 class="section-heading">Colour swatches</h3>
-          <ul class="swatchgrid">
-            <li class="color-swatch-1"></li>
-            <li class="color-swatch-2"></li>
-            <li class="color-swatch-3"></li>
-            <li class="color-swatch-4"></li>
-            <li class="color-swatch-5"></li>
+          <ul class="swatchgrid1">
+            <li class="primary-color1">#0a0303</li>
+            <li class="primary-color2">#2f989d</li>
+            <li class="primary-color3">#ea7c48</li>
+            <li class="primary-color4">#f79d1e</li>
+          </ul>
+<br>
+          <ul class = "swatchgrid2">
+            <li class="secondary-color1">#ece7e7</li>
+            <li class="secondary-color2">#a3c8ca</li>
+            <li class="secondary-color3">#f3ae9e</li>
+            <li class="secondary-color4">#f1d3ae</li>
           </ul>
         </section>
-        <section class="textures">
+
+        <!-- <section class="textures">
           <h3 class="section-heading">Textures</h3>
           <ul class="swatchgrid">
             <li class="texture-swatch-1"></li>
             <li class="texture-swatch-2"></li>
             <li class="texture-swatch-3"></li>
           </ul>
-        </section>
+        </section> -->
         <section class="buttons">
           <h3 class="section-heading">Buttons</h3>
           <div>
-            <button type="button" class="primary-button">Button 1</button>
-            <button type="button" class="secondary-button">Button 2</button>
+            <button type="button" class="primary-button">see more</button>
+
+            <button type="button" class="secondary-button"> <i class="fa fa-caret-down" aria-hidden="true"></i> SEE MORE</button>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fa fa-times" aria-hidden="true"></i>
           </div>
         </section>
       </div>
@@ -51,15 +62,17 @@
       <div class="column">
         <section class="typography-main">
           <h3 class="section-heading">Typography</h3>
-          <h1 class="h1-sample">A sample header</h1>
+          <h1 class="header-sampleUpper">A sample header</h1>
+          <h1 class="header-sample">A sample header</h1>
+          
           <p class="font-details-h1">
-            <span class="font-name">Font Name</span>,
-            <span class="font-color">#color value</span>
+            <span class="font-name">'Josefin Sans', sans-serif;</span>,
+            <span class="font-color">#000 700bold</span>
           </p>
           <h2 class="h2-sample">An example of a sub header</h2>
           <p class="font-details-h2">
-            <span class="font-name">Font Name</span>,
-            <span class="font-color">#color value</span>
+            <span class="font-name">'Lato', sans-serif;</span>,
+            <span class="font-color">#000 300light</span>
           </p>
           <p class="typography-sample">
             This sample paragraph has <strong>strong parts</strong> and
@@ -70,24 +83,24 @@
             netus et malesuada fames ac turpis egestas.
           </p>
           <p class="font-details-p">
-            <span class="font-name">Font Name</span>,
-            <span class="font-color">#color value</span>
+            <span class="font-name">'Lato', sans-serif;</span>,
+            <span class="font-color">#000 300light</span>
           </p>
           <a href="#" class="typography-sample"
             >This is an example of a text link.</a
           >
           <p class="font-details-a">
-            <span class="font-name">Font Name</span>,
-            <span class="font-color">#color value</span>
+            <span class="font-name">'Lato', sans-serif;</span>,
+            <span class="font-color">#000 300light</span>
           </p>
         </section>
         <section class="adjectives">
           <h3 class="section-heading">Adjectives</h3>
           <ul>
-            <li>Write</li>
-            <li>Your</li>
-            <li>adjectives</li>
-            <li>here</li>
+            <li>#playfull</li>
+            <li>#light</li>
+            <li>#colorful</li>
+            <li>#edgy</li>
           </ul>
         </section>
       </div>
@@ -95,9 +108,9 @@
     </main>
 
     <div class="full-width">
-      <footer>
+      <!-- <footer>
         <p>Be creative - don't just use this template as is!</p>
-      </footer>
+      </footer> -->
     </div>
   </body>
 </html>

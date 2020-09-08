@@ -1,8 +1,10 @@
 /* change these */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800"); */
 /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lato:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,17 +16,60 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --primary-color1: #0a0303;
+  --primary-color2: #2f989d;
+  --primary-color3: #ea7c48;
+  --primary-color4: #f79d1e;
+ 
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
+  --secondary-color1: #ece7e7;
+  --secondary-color2: #a3c8ca;
+  --secondary-color3: #f3ae9e;
+  --secondary-color4: #f1d3ae;
+
+ 
+
+  --primary-font: 'Lato', sans-serif;
+  --display-font: "Josefin Sans", sans-serif;
   --main-text-color: #000;
-
   --white-space: 1rem;
+}
+
+
+/***COLORS***/
+
+.primary-color1 {
+  background-color: var(--primary-color1);
+  color: white;
+}
+
+.primary-color2 {
+  background-color: var(--primary-color2);
+}
+
+.primary-color3 {
+  background-color: var(--primary-color3);
+}
+
+.primary-color4 {
+  background-color: var(--primary-color4);
+}
+
+
+.secondary-color1 {
+  background-color: var(--secondary-color1);
+}
+
+.secondary-color2 {
+  background-color: var(--secondary-color2);
+}
+
+.secondary-color3 {
+  background-color: var(--secondary-color3);
+}
+
+.secondary-color4 {
+  background-color: var(--secondary-color4);
 }
 
 button {
@@ -33,19 +78,68 @@ button {
 a {
   transition: all 3s;
 }
-button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+
+.primary-button {
+  background-color: var( --primary-color3);
+  border-radius: 50px;
+
+}
+.primary-button:hover {
+  background-color: var( --secondary-color3);
+  transform: scale(1.1);
 }
 
-button:active {
-  background-color: var(--bg-color);
+.primary-button:active {
+  background-color: var(--secondary-color3);
 }
 
-a:hover {
+.secondary-button {
+  background-color: var(--primary-color2);
+
+}
+.secondary-button:hover {
+  background-color: var( --secondary-color2);
+  transform: scale(1.1);
+}
+
+.secondary-button:active {
+  background-color: var(--secondary-color2);
+}
+
+.fa-bars, .fa-times {
+  font-size: 2rem;
+  color:  var(--primary-color2);
+}
+
+button {
+  padding: 1rem;
+  border-radius: 4px;
+  /* background: var(--link-color); */
+  text-align: center;
+  text-decoration: none;
+  font: bold 1.25em/1 var(--display-font);
+  letter-spacing: 1px;
+  color: var(--secondary-color1);
+  text-shadow: 0px -1px 0px #7795a1;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin: 0 1rem 1rem 0;
+}
+
+
+button:focus,
+button:active,
+button:focus-within {
+  outline: 0;
+  border-radius: 4px;
+}
+
+/* a:hover {
   color: var(--link-hover-color);
   font-size: 4rem;
-}
+} */
+
+
 html {
   font-size: 100%;
   font-family: var(--primary-font);
@@ -62,7 +156,9 @@ footer {
   max-width: 1300px;
   margin: 0 auto;
   padding: calc(2 * var(--white-space));
+  color: var(--primary-color1);
 }
+
 
 .full-width {
   background: var(--bg-color);
@@ -70,29 +166,34 @@ footer {
   width: 100%;
 }
 
+
+/**HEADER**/
+
 .header-wrapper h1 {
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: -2px;
   padding-right: 0.75em;
   font-weight: bold;
-  color: white;
+  /* color: whitez; */
 }
 
+
+
 .header-wrapper h2 {
-  font-size: 1.6em;
-  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.8rem;
+  color: var(--primary-color3);
   font-weight: bold;
   margin: var(--white-space) 0;
 }
 
 .header-wrapper h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: italic;
 }
 
 .header-wrapper h4 {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 main {
@@ -112,41 +213,23 @@ section {
 
 ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .swatches li {
   margin-right: 5vw;
-  height: 15vw;
-  width: 20%;
+  height: 25vw;
+  width: 40%;
 }
 
 ul li:last-child {
   margin-right: 0;
 }
 
-.color-swatch-1 {
-  background-color: var(--bg-color);
-}
 
-.color-swatch-2 {
-  background-color: var(--link-color);
-}
 
-.color-swatch-3 {
-  background-color: var(--link-hover-color);
-}
-
-.color-swatch-4 {
-  background-color: var(--color-4);
-}
-
-.color-swatch-5 {
-  background-color: var(--color-5);
-}
-
-.textures li {
-  height: 30vw;
+/* .textures li {
+  height: 25vw;
   width: 40%;
   margin-right: 5vw;
 }
@@ -165,64 +248,50 @@ ul li:last-child {
 
 .texture-swatch-3 {
   background: url(../img/white_paperboard.png) top left repeat;
-}
+} */
 
-.images ul {
+/* .images ul {
   flex-direction: column;
   text-align: center;
 }
 
 .images li {
   display: block;
-  /*margin-right: 5vw;*/
+  /*margin-right: 5vw;
   margin-bottom: 1rem;
-}
+} */
 
-button {
-  padding: 1rem;
-  border-radius: 4px;
-  background: var(--link-color);
-  text-align: center;
-  text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
-  letter-spacing: 1px;
-  color: white;
-  text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  margin: 0 1rem 1rem 0;
-}
 
-.secondary-button {
-  background: var(--color-5);
-}
 
-button:focus,
-button:active,
-button:focus-within {
-  outline: 0;
-  border-radius: 4px;
-}
 
+/**TYPOGRAPHY**/
 .typography-main {
   color: var(--main-text-color);
 }
 
-.h1-sample {
-  font-size: 2.4rem;
+.header-sampleUpper {
+  font-family: var(--display-font);
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header-sample {
+  font-family: var(--display-font);
+  font-size: 2.8rem;
   font-weight: bold;
 }
 
 .h2-sample {
-  font-family: var(--secondary-font);
-  font-style: italic;
-  font-size: 1.25rem;
+  font-family: var(--display-font);
+  font-size: 2.4rem;
+  font-weight: bold;
 }
 
 p.typography-sample {
-  font-family: var(--secondary-font);
+  font-family: var(--copy-font);
   line-height: 1.5;
+  font-size: 1.6rem;
   max-width: 960px;
 }
 
@@ -235,18 +304,18 @@ em {
 }
 
 a {
-  font-family: var(--primary-font);
+  font-family: var(--copy-font);
   color: var(--link-color);
+  font-size: 1.4rem;
   font-weight: bold;
-  text-decoration: none;
   transition: all 0.2s;
 }
 
 p[class*="font-details-"] {
   margin-top: 0.5rem;
   margin-bottom: calc(2 * var(--white-space));
-  font-size: 0.75rem;
-  font-family: var(--secondary-font);
+  font-size: 1rem;
+  font-family: var(--copy-font);
   color: #6f6f6f;
 }
 
@@ -257,11 +326,12 @@ p[class*="font-details-"] {
 
 .adjectives ul {
   flex-direction: column;
+  align-items: space-between;
 }
 
-footer {
+ footer {
   font-style: italic;
-}
+} 
 
 @media (min-width: 800px) {
   main {
