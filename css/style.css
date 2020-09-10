@@ -34,7 +34,9 @@ use the fonts in other ways in the font hierarchy etc. */
   --main-text-color: #000;
   --white-space: 1rem;
 }
-
+body {
+  color: var( --secondary-color4);
+}
 
 /***COLOR PALETTE***/
 
